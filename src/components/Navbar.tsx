@@ -3,10 +3,16 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
+interface ItemProps {
+  title: string
+  href: string
+  targetBlank?: boolean
+}
+
 export function Navbar() {
   const pathname = usePathname()
 
-  const Item = ({ title, href }: { title: string; href: string }) => {
+  const Item = ({ title, href, targetBlank }: ItemProps) => {
     const isActive =
       (pathname === '/' && href === '/') ||
       (href !== '/' && pathname.includes(href))
@@ -16,6 +22,7 @@ export function Navbar() {
         <Link
           href={href}
           className={`w-full rounded px-4 py-1 text-sm md:py-2 ${isActive ? 'bg-stone-800' : ''}`}
+          target={targetBlank ? '_blank' : '_self'}
         >
           {title}
         </Link>
@@ -31,7 +38,13 @@ export function Navbar() {
       <ul className="flex flex-col space-y-3">
         <Item title="Início" href="/" />
         <Item title="Sobre mim" href="/sobre" />
+        <Item title="Projetos" href="/projetos" />
         <Item title="Blog" href="/blog" />
+        <Item
+          title="Currículo"
+          href="https://me-green-tau.vercel.app/"
+          targetBlank
+        />
       </ul>
     </nav>
   )

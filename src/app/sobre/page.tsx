@@ -8,17 +8,24 @@ export default function About() {
         <p>
           Tenho experiência sólida em várias tecnologias de desenvolvimento. No
           front-end, utilizo <strong>React</strong> e <strong>Next.js</strong>
-          para criar interfaces de usuário dinâmicas e responsivas. Além disso,
-          sou proficiente em <strong>HTML</strong>, <strong>CSS</strong> e{' '}
-          <strong>Tailwind CSS</strong>, o que me permite construir designs
-          visualmente agradáveis e funcionais. No back-end, trabalho com{' '}
-          <strong>Node.js</strong>, utilizando <strong>Typescript</strong> para
-          garantir a tipagem estática e a manutenção do código. Tenho também
-          experiência em bancos de dados relacionais, especialmente{' '}
+          para criar interfaces de usuário dinâmicas e responsivas.
+        </p>
+        <p>
+          Além disso, sou proficiente em <strong>HTML</strong>,{' '}
+          <strong>CSS</strong> e <strong>Tailwind CSS</strong>, o que me permite
+          construir designs visualmente agradáveis e funcionais. No back-end,
+          trabalho com <strong>Node.js</strong>, utilizando{' '}
+          <strong>Typescript</strong> para garantir a tipagem estática e a
+          manutenção do código.{' '}
+        </p>
+        <p>
+          Tenho experiência em bancos de dados relacionais, especialmente{' '}
           <strong>PostgreSQL</strong>, e uso o <strong>Prisma ORM</strong> para
-          gerenciar as interações com o banco de dados. Além disso, possuo
-          conhecimento em desenvolvimento de APIs RESTful, facilitando a
-          integração entre diferentes serviços e aplicações.
+          gerenciar as interações com o banco de dados.{' '}
+        </p>
+        <p>
+          Além disso, possuo conhecimento em desenvolvimento de APIs RESTful,
+          facilitando a integração entre diferentes serviços e aplicações.
         </p>
       </section>
 
@@ -29,14 +36,16 @@ export default function About() {
         <p>
           No que diz respeito às habilidades não técnicas, sou especializado em
           desenvolvimento front-end, onde crio interfaces responsivas e
-          otimizadas, garantindo compatibilidade entre dispositivos. No
-          desenvolvimento back-end, foco na implementação de sistemas robustos e
-          escaláveis, com atenção especial à segurança e performance. A
-          integração de APIs é uma das minhas competências chave, permitindo a
-          conexão de serviços e dados de diversas fontes para fornecer
-          funcionalidades avançadas. Além disso, aplico princípios de UX/UI
-          design para melhorar a interação do usuário e a estética visual das
-          aplicações que desenvolvo.
+          otimizadas, garantindo compatibilidade entre dispositivos.
+        </p>
+        <p>
+          No desenvolvimento back-end, foco na implementação de sistemas
+          robustos e escaláveis, com atenção especial à segurança e performance.
+        </p>
+        <p>
+          Além disso, aplico princípios de UX/UI design para melhorar a
+          interação do usuário e a estética visual das aplicações que
+          desenvolvo.
         </p>
       </section>
 

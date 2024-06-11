@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { EmailIcon } from './icons/EmailIcon'
-import { InstagramIcon } from './icons/InstagramIcon'
 import { LinkedinIcon } from './icons/LinkedinIcon'
+import { GithubIcon } from './icons/GithubIcon'
 
 export function ThgMagno() {
   return (
@@ -21,9 +21,9 @@ export function ThgMagno() {
             thgmgn@gmail.com
           </span>
         </a>
-        <a href="https://www.instagram.com/thgmagno/">
+        <a href="https://github.com/thgmagno">
           <span className="flex items-center gap-2 text-sm md:text-base">
-            <InstagramIcon />
+            <GithubIcon />
             thgmagno
           </span>
         </a>

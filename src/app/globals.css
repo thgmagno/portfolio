@@ -8,13 +8,13 @@
   }
 
   main {
-    @apply max-w-2xl mx-auto mt-16 mb-32 font-sans flex
+    @apply max-w-2xl mx-auto mt-16 font-sans flex
   }
 }
 
 @layer components {
   .page {
-    @apply p-4 md:p-8 space-y-4 md:space-y-6
+    @apply p-4 md:p-8 space-y-4 md:space-y-6 mb-32
   }
 
   .page p {

@@ -16,8 +16,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+    <html
+      lang="pt-br"
+      className="scrollbar-thumb-stone-900 scrollbar-track-stone-300"
+    >
+      <body
+        className={`scrollbar-thin h-32 overflow-y-scroll ${GeistSans.variable} ${GeistMono.variable}`}
+      >
         <main>
           <Navbar />
           {children}
