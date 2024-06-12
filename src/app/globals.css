@@ -8,7 +8,7 @@
   }
 
   main {
-    @apply max-w-2xl mx-auto mt-16 font-sans flex
+    @apply max-w-sm md:max-w-2xl mx-auto mt-16 font-sans flex flex-col md:flex-row
   }
 }
 
@@ -44,4 +44,13 @@
   .error {
     @apply text-red-600 flex justify-center
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
 }

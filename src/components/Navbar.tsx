@@ -18,7 +18,7 @@ export function Navbar() {
       (href !== '/' && pathname.includes(href))
 
     return (
-      <li className="flex">
+      <li className="flex min-w-28">
         <Link
           href={href}
           className={`w-full rounded px-4 py-1 text-sm md:py-2 ${isActive ? 'bg-stone-800' : ''}`}
@@ -35,7 +35,7 @@ export function Navbar() {
       <div className="flex justify-center p-5">
         <span className="font-serif text-4xl md:text-6xl">TM</span>
       </div>
-      <ul className="flex flex-col space-y-3">
+      <ul className="no-scrollbar flex w-full overflow-scroll md:flex-col">
         <Item title="Início" href="/" />
         <Item title="Sobre mim" href="/sobre" />
         <Item title="Projetos" href="/projetos" />
