@@ -37,5 +37,9 @@ export async function newPost(
   await kv.hset('posts', { [title as string]: { content } })
 
   revalidatePath('/')
-  redirect('/')
+  redirect('/blog')
+}
+
+export async function getAllPosts() {
+  return kv.hgetall('posts')
 }

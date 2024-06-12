@@ -18,7 +18,7 @@ export function CreatePostForm() {
         {/* Senha */}
         <div>
           <label htmlFor="password">Senha</label>
-          <input type="text" id="password" name="password" />
+          <input type="password" id="password" name="password" />
         </div>
       </section>
 
