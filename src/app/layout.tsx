@@ -18,10 +18,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className="scrollbar-thumb-stone-900 scrollbar-track-stone-300"
+      className="scrollbar-track-stone-300 scrollbar-thumb-stone-900"
     >
       <body
-        className={`scrollbar-thin h-32 overflow-y-scroll ${GeistSans.variable} ${GeistMono.variable}`}
+        className={`h-32 overflow-y-scroll scrollbar-thin ${GeistSans.variable} ${GeistMono.variable}`}
       >
         <main>
           <Navbar />

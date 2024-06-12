@@ -5,6 +5,7 @@ import { kv } from '@vercel/kv'
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import * as bcrypt from 'bcrypt'
+import { PostType } from '@/lib/types'
 
 export async function newPost(
   formSate: CreatePostFormState,
@@ -40,6 +41,6 @@ export async function newPost(
   redirect('/blog')
 }
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<Record<string, PostType> | null> {
   return kv.hgetall('posts')
 }

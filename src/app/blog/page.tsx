@@ -1,9 +1,8 @@
 import * as actions from '@/actions'
 import { Post } from '@/components/Post'
-import { PostType } from '@/lib/types'
 
 export default async function Blog() {
-  const posts: Record<string, PostType> | null = await actions.getAllPosts()
+  const posts = await actions.getAllPosts()
 
   return (
     <div className="page">
