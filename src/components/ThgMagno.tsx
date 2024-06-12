@@ -15,19 +15,19 @@ export function ThgMagno() {
         />
       </div>
       <div className="flex flex-1 flex-col justify-center space-y-1 pl-1.5 md:space-y-3 md:pl-6">
-        <a href="mailto:thgmgn@gmail.com">
+        <a target="_blank" href="mailto:thgmgn@gmail.com">
           <span className="flex items-center gap-2 text-sm md:text-base">
             <EmailIcon />
             thgmgn@gmail.com
           </span>
         </a>
-        <a href="https://github.com/thgmagno">
+        <a target="_blank" href="https://github.com/thgmagno">
           <span className="flex items-center gap-2 text-sm md:text-base">
             <GithubIcon />
             thgmagno
           </span>
         </a>
-        <a href="https://www.linkedin.com/in/thgmagno/">
+        <a target="_blank" href="https://www.linkedin.com/in/thgmagno/">
           <span className="flex items-center gap-2 text-sm md:text-base">
             <LinkedinIcon />
             thgmagno

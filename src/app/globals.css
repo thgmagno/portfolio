@@ -20,4 +20,28 @@
   .page p {
     @apply text-justify text-sm md:text-base
   }
+
+  .page form input {
+    @apply p-2 outline-none bg-stone-600 rounded-md
+  }
+
+  .page form textarea {
+    @apply p-2 outline-none bg-stone-600 rounded-md
+  }
+
+  .page form div {
+    @apply flex flex-col space-y-1
+  }
+
+  .page form div label {
+    @apply text-sm
+  }
+
+  .page form button[type="submit"] {
+    @apply p-2 border border-stone-600 rounded-md text-stone-400 hover:bg-stone-800 hover:text-stone-200
+  }
+
+  .error {
+    @apply text-red-600 flex justify-center
+  }
 }
