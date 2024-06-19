@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export function Project({ project }: { project: ProjectType }) {
   return (
-    <div className="mb-10 flex flex-col space-y-5 rounded-lg">
+    <div className="mb-10 mt-5 flex flex-col space-y-5 rounded-lg">
       <Image
         src={project.imageUrl}
         height={500}
@@ -27,7 +27,7 @@ export function Project({ project }: { project: ProjectType }) {
         </Link>
       </section>
 
-      <section className="flex flex-col space-x-5">
+      <section className="flex flex-col">
         <label className="mb-5 text-lg font-bold text-stone-600">
           Características:
         </label>
@@ -75,7 +75,7 @@ export function Project({ project }: { project: ProjectType }) {
         <label className="text-lg font-bold text-stone-600">
           Tecnologias utilizadas:
         </label>
-        <div className="grid grid-cols-4 gap-2">
+        <div className="grid grid-cols-3 gap-2 md:grid-cols-4">
           {project.tecnologies.sort().map((tec) => (
             <Link
               key={tec.label}

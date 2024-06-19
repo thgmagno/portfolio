@@ -5,7 +5,7 @@
       "Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras e eficientes",
       "Meu foco é proporcionar uma experiência de usuário excelente, utilizando as melhores práticas de design e desenvolvimento."
     ],
-    "avatar": "/images/thiago.jpg"
+    "avatar": "/images/thiago.webp"
   },
   "social": {
     "email": {
@@ -201,7 +201,7 @@
         }
       ],
       "link": "https://aluno-connect.vercel.app/",
-      "imageUrl": "/assets/student.jpg"
+      "imageUrl": "/assets/student.webp"
     },
     {
       "name": "FinancePro",
@@ -232,7 +232,7 @@
           "description": "Utilização de gráficos para visualizar e comparar despesas versus receitas ao longo do tempo."
         },
         {
-          "label": "Utilização de Server Actions",
+          "label": "Utilização de Server Actions:",
           "description": "Utilização de Server Actions do Next.js para lidar com lógica do lado do servidor de forma eficiente e escalável."
         }
       ],
@@ -275,30 +275,30 @@
         }
       ],
       "link": "https://finance-pro-swart.vercel.app/",
-      "imageUrl": "/assets/money.jpg"
+      "imageUrl": "/assets/money.webp"
     },
     {
       "name": "Virtual Card",
       "description": "Virtual Card é uma aplicação web desenvolvida em React para renderização de cartões de crédito virtuais.",
       "features": [
         {
-          "label": "Renderização em Tempo Real",
+          "label": "Renderização em Tempo Real:",
           "description": "A aplicação atualiza a visualização do cartão de crédito em tempo real conforme o usuário digita as informações."
         },
         {
-          "label": "Gerenciamento de Estado com React",
+          "label": "Gerenciamento de Estado com React:",
           "description": "Utiliza hooks do React, como useState, para gerenciar o estado do formulário e do cartão."
         },
         {
-          "label": "Separação de Componentes",
+          "label": "Separação de Componentes:",
           "description": "A aplicação é modularizada em componentes separados para o formulário de entrada e a renderização do cartão, melhorando a manutenção e a reutilização do código."
         },
         {
-          "label": "Animações e Interatividade",
+          "label": "Animações e Interatividade:",
           "description": "Implementação de animações suaves para transições entre a frente e o verso do cartão, melhorando a experiência do usuário."
         },
         {
-          "label": "Design Responsivo",
+          "label": "Design Responsivo:",
           "description": "A interface é responsiva e otimizada para diferentes tamanhos de tela, garantindo uma experiência consistente em dispositivos móveis e desktops."
         }
       ],
@@ -321,7 +321,7 @@
         }
       ],
       "link": "https://input-cartao-de-credito.vercel.app/",
-      "imageUrl": "/assets/credit_card.jpg"
+      "imageUrl": "/assets/credit_card.webp"
     }
   ]
 }

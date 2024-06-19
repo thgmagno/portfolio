@@ -41,6 +41,12 @@ export async function newPost(
   redirect('/blog')
 }
 
-export async function getAllPosts(): Promise<Record<string, PostType> | null> {
+export async function getPosts(): Promise<Record<string, PostType> | null> {
   return kv.hgetall('posts')
+}
+
+export async function getPostByTitle(
+  title: string,
+): Promise<Record<string, PostType> | null> {
+  return kv.hget('posts', title)
 }

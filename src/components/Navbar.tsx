@@ -18,10 +18,10 @@ export function Navbar() {
       (href !== '/' && pathname.includes(href))
 
     return (
-      <li>
+      <li className="flex-1 md:mr-2">
         <Link
           href={href}
-          className={`flex justify-center rounded p-2 text-sm md:justify-start md:text-base ${isActive ? 'bg-stone-800 text-neutral-200' : ''}`}
+          className={`flex shrink justify-center rounded p-1 text-sm md:justify-start md:p-2 md:text-base ${isActive ? 'bg-stone-800 text-neutral-200' : ''}`}
           target={targetBlank ? '_blank' : '_self'}
         >
           {title}
@@ -35,7 +35,7 @@ export function Navbar() {
       <div className="my-5 hidden items-center justify-center md:flex">
         <span className="cursor-default font-serif text-5xl">TM</span>
       </div>
-      <ul className="grid grid-cols-5 items-center md:grid-cols-1 md:px-2">
+      <ul className="flex md:flex-col">
         <Item title="Início" href="/" />
         <Item title="Formação" href="/formacao" />
         <Item title="Habilidades" href="/habilidades" />

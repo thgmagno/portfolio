@@ -1,21 +1,24 @@
-import { ReactNode } from 'react'
 import data from '@/data.json'
+import Link from 'next/link'
+import { Wrapper } from '@/components/common/Wrapper'
+import { Title } from '@/components/common/Title'
 
 export default function Education() {
   const { education } = data
 
-  const Wrapper = ({ children }: { children: ReactNode }) => (
-    <section className="mb-10 pr-5">{children}</section>
-  )
-
-  const Title = ({ title }: { title: string }) => (
-    <b className="font-serif text-xl md:text-2xl">{title}</b>
-  )
-
   return (
     <>
       <Wrapper>
-        <Title title="Formação" />
+        <div className="flex justify-between">
+          <Title title="Formação" />
+          <Link
+            href="https://me-green-tau.vercel.app/"
+            target="_blank"
+            className="inline-flex gap-2 rounded border p-2 transition-colors duration-200 hover:bg-stone-600"
+          >
+            Currículo
+          </Link>
+        </div>
         {education.map((item) => (
           <div key={item.degree} className="my-5 flex flex-col text-start">
             <b>
@@ -27,9 +30,6 @@ export default function Education() {
           </div>
         ))}
       </Wrapper>
-      <button className="mx-auto w-full rounded border p-2 transition-colors duration-200 hover:bg-stone-600 md:w-fit">
-        Baixar currículo em PDF
-      </button>
     </>
   )
 }

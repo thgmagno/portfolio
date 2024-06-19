@@ -1,17 +1,10 @@
 import * as actions from '@/actions'
 import { Post } from '@/components/Post'
-import { ReactNode } from 'react'
+import { Title } from '@/components/common/Title'
+import { Wrapper } from '@/components/common/Wrapper'
 
 export default async function Blog() {
-  const posts = await actions.getAllPosts()
-
-  const Wrapper = ({ children }: { children: ReactNode }) => (
-    <section className="mb-10 pr-5">{children}</section>
-  )
-
-  const Title = ({ title }: { title: string }) => (
-    <b className="font-serif text-xl md:text-2xl">{title}</b>
-  )
+  const posts = await actions.getPosts()
 
   return (
     <Wrapper>
