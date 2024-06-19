@@ -14,19 +14,15 @@ export function Post({ post }: Props) {
   const html = marked.parse(post.content)
 
   return (
-    <div className="my-5 flex flex-col">
-      <section className="my-5 flex flex-col space-y-5">
-        <header>
-          <h1 className="text-center text-lg font-medium">{post.title}</h1>
-        </header>
-        <main
-          className="markdown text-justify"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        <footer className="mx-auto text-sm text-stone-500">
-          <span>{createdAt}</span>
-        </footer>
-      </section>
-    </div>
+    <>
+      <div className="mb-5 flex flex-col">
+        <h1 className="font-serif md:text-2xl">{post.title}</h1>
+        <span className="text-sm text-stone-500">{createdAt}</span>
+      </div>
+      <main
+        className="markdown text-justify"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+    </>
   )
 }
