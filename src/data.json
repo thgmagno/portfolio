@@ -147,7 +147,7 @@
         },
         {
           "label": "Criação de Contas:",
-          "description": "Capacidade de criar contas para diferentes tipos de usuários. [sub-description]: Alunos podem verificar sua frequência e detalhes de turmas/Professores têm permissão para registrar frequências, e gerenciar suas turmas./Administradores possuem acesso completo ao sistema, incluindo gerenciamento de usuários e configurações./Responsáveis podem visualizar as frequências dos alunos sob sua responsabilidade./Segurança e Privacidade: Implementação de medidas de segurança para proteger dados sensíveis dos alunos e informações do sistema."
+          "description": "Capacidade de criar contas para diversos tipos de usuários incluindo alunos, responsáveis, instrutores e administradores."
         },
         {
           "label": "Banco de Dados PostgreSQL:",
@@ -159,7 +159,7 @@
         },
         {
           "label": "Responsividade:",
-          "description": "Design responsivo que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
+          "description": "Design que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
         },
         {
           "label": "Facilidade de Uso:",
@@ -225,7 +225,7 @@
         },
         {
           "label": "Responsividade:",
-          "description": "Design responsivo que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
+          "description": "Design que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
         },
         {
           "label": "Gráficos de Comparação:",

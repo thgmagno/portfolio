@@ -9,7 +9,7 @@ export default function Education() {
   return (
     <>
       <Wrapper>
-        <div className="flex justify-between">
+        <div className="flex items-center justify-between">
           <Title title="Formação" />
           <Link
             href="https://me-green-tau.vercel.app/"

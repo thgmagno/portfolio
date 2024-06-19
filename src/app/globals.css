@@ -10,11 +10,27 @@
 
 @layer components {
   .create-post-form {
-    @apply flex flex-col space-y-5 mx-2
+    @apply flex flex-col space-y-5 md:mx-2
   }
 
   .create-post-form input,
   .create-post-form textarea {
     @apply flex p-2 w-full rounded-md bg-neutral-600 outline-none
+  }
+
+  .markdown {
+    @apply flex flex-col space-y-3
+  }
+
+  .markdown h1 {
+    @apply text-2xl
+  }
+
+  .markdown h2 {
+    @apply text-xl
+  }
+
+  .markdown h3 {
+    @apply text-lg
   }
 }

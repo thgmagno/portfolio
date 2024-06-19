@@ -5,13 +5,15 @@ import Link from 'next/link'
 export function Project({ project }: { project: ProjectType }) {
   return (
     <div className="mb-10 mt-5 flex flex-col space-y-5 rounded-lg">
-      <Image
-        src={project.imageUrl}
-        height={500}
-        width={500}
-        alt={`Imagem do projeto ${project.name}`}
-        className="rounded-lg"
-      />
+      <div className="relative flex h-60 w-full">
+        <Image
+          src={project.imageUrl}
+          layout="fill"
+          objectFit="cover"
+          alt={`Imagem do projeto ${project.name}`}
+          className="rounded-lg border-2 border-stone-600 shadow"
+        />
+      </div>
 
       <section className="flex items-center justify-between">
         <div className="mr-6 flex-1 text-start">
@@ -28,51 +30,18 @@ export function Project({ project }: { project: ProjectType }) {
       </section>
 
       <section className="flex flex-col">
-        <label className="mb-5 text-lg font-bold text-stone-600">
-          Características:
-        </label>
+        <label className="mb-5 text-lg text-stone-500">Características:</label>
         {project.features.map((feature) => {
-          const hasSubdescription = feature.description.includes(
-            '[sub-description]: ',
-          )
-
-          if (hasSubdescription) {
-            const description = feature.description.split(
-              '[sub-description]: ',
-            )[0]
-
-            const subdescriptions = feature.description
-              .split('[sub-description]: ')[1]
-              .split('/')
-
-            return (
-              <>
-                <h2>
-                  {feature.label} {description}
-                </h2>
-                <div className="mb-2.5">
-                  {subdescriptions.map((sub, index) => (
-                    <p key={index} className="mb-2.5">
-                      {sub}
-                    </p>
-                  ))}
-                </div>
-              </>
-            )
-          }
-
           return (
-            <>
-              <h2 className="mb-2.5">
-                {feature.label} {feature.description}
-              </h2>
-            </>
+            <h2 className="mb-2.5 font-thin">
+              <b>{feature.label}</b> {feature.description}
+            </h2>
           )
         })}
       </section>
 
       <section className="flex flex-col space-y-5">
-        <label className="text-lg font-bold text-stone-600">
+        <label className="text-lg text-stone-500">
           Tecnologias utilizadas:
         </label>
         <div className="grid grid-cols-3 gap-2 md:grid-cols-4">

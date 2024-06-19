@@ -30,10 +30,10 @@ export default async function Blog({
       </div>
       {searchParams?.post ? (
         <Post
-          title={searchParams.post}
           post={{
-            content: String(Object.values(posts)[0]),
-            createdAt: String(Object.values(posts)[1]),
+            title: String(Object.values(posts)[0]),
+            content: String(Object.values(posts)[1]),
+            createdAt: String(Object.values(posts)[2]),
           }}
         />
       ) : (

@@ -21,7 +21,7 @@ export function Navbar() {
       <li className="flex-1 md:mr-2">
         <Link
           href={href}
-          className={`flex shrink justify-center rounded p-1 text-sm md:justify-start md:p-2 md:text-base ${isActive ? 'bg-stone-800 text-neutral-200' : ''}`}
+          className={`flex shrink justify-center rounded px-1 py-2 text-sm md:justify-start md:p-2 md:text-base ${isActive ? 'bg-stone-800 text-neutral-200' : ''}`}
           target={targetBlank ? '_blank' : '_self'}
         >
           {title}

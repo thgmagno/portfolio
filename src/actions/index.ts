@@ -13,11 +13,16 @@ export async function newPost(
 ): Promise<CreatePostFormState> {
   const username = formData.get('username')
   const password = formData.get('password')
+
   const title = formData.get('title')
   const content = formData.get('content')
 
   const usernameKV = await kv.hget('user', 'username')
   const passwordKV = await kv.hget('user', 'password')
+
+  if (!title || !content) {
+    return { errors: { _form: 'Formulário inválido' } }
+  }
 
   const usernameIsMatch = await bcrypt.compare(
     username as string,
@@ -35,8 +40,14 @@ export async function newPost(
     return { errors: { _form: 'Usuário não autorizado' } }
   }
 
+  const newPost = {
+    title: title as string,
+    content: content as string,
+    createdAt: new Date(),
+  }
+
   await kv.hset('posts', {
-    [title as string]: { content, createdAt: new Date() },
+    [title as string]: JSON.stringify(newPost),
   })
 
   revalidatePath('/')

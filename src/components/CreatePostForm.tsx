@@ -9,7 +9,7 @@ export function CreatePostForm() {
 
   return (
     <form action={action} className="create-post-form my-5">
-      <section className="flex justify-between">
+      <section className="flex flex-col space-y-5 md:flex-row md:justify-between md:space-y-0">
         {/* Usuário */}
         <div>
           <label htmlFor="username">Usuário</label>
