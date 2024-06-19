@@ -3,7 +3,6 @@
 import { PostType } from '@/lib/types'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Title } from './common/Title'
 
 interface Props {
   title: string
