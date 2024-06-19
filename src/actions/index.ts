@@ -35,18 +35,20 @@ export async function newPost(
     return { errors: { _form: 'Usuário não autorizado' } }
   }
 
-  await kv.hset('posts', { [title as string]: { content } })
+  await kv.hset('posts', {
+    [title as string]: { content, createdAt: new Date() },
+  })
 
   revalidatePath('/')
   redirect('/blog')
 }
 
-export async function getPosts(): Promise<Record<string, PostType> | null> {
-  return kv.hgetall('posts')
-}
-
-export async function getPostByTitle(
-  title: string,
+export async function getPosts(
+  title?: string,
 ): Promise<Record<string, PostType> | null> {
-  return kv.hget('posts', title)
+  if (title) {
+    return kv.hget('posts', title)
+  }
+
+  return kv.hgetall('posts')
 }

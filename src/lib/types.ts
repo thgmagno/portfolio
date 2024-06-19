@@ -1,5 +1,6 @@
 export type PostType = {
   content: string
+  createdAt: string
 }
 
 export type ProjectType = {

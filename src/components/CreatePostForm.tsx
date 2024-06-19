@@ -1,14 +1,15 @@
 'use client'
 
-import { useFormState } from 'react-dom'
+import { useFormState, useFormStatus } from 'react-dom'
 import * as actions from '@/actions'
 
 export function CreatePostForm() {
   const [formState, action] = useFormState(actions.newPost, { errors: {} })
+  const { pending } = useFormStatus()
 
   return (
-    <form action={action}>
-      <section>
+    <form action={action} className="create-post-form my-5">
+      <section className="flex justify-between">
         {/* Usuário */}
         <div>
           <label htmlFor="username">Usuário</label>
@@ -34,10 +35,19 @@ export function CreatePostForm() {
         <textarea id="content" name="content" />
       </div>
 
-      {formState?.errors._form && <p>{formState.errors._form}</p>}
+      {formState?.errors._form && (
+        <p className="my-3 text-center text-sm text-red-600">
+          {formState.errors._form}
+        </p>
+      )}
 
       {/* Submit */}
-      <button type="submit">Publicar</button>
+      <button
+        type="submit"
+        className="rounded-md border p-2 hover:bg-stone-800"
+      >
+        {pending ? 'Aguarde' : 'Publicar'}
+      </button>
     </form>
   )
 }

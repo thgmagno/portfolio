@@ -7,3 +7,14 @@
     @apply bg-[#120f10] text-neutral-200
   }
 }
+
+@layer components {
+  .create-post-form {
+    @apply flex flex-col space-y-5 mx-2
+  }
+
+  .create-post-form input,
+  .create-post-form textarea {
+    @apply flex p-2 w-full rounded-md bg-neutral-600 outline-none
+  }
+}
