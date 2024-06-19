@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
+import { Montserrat } from 'next/font/google'
+
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 
@@ -10,21 +10,20 @@ export const metadata: Metadata = {
     'Conheça meu portfólio através deste site desenvolvido com NextJS',
 }
 
+const montserrat = Montserrat({ subsets: ['latin'] })
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html
-      lang="pt-br"
-      className="scrollbar-track-stone-300 scrollbar-thumb-stone-900"
-    >
+    <html lang="pt-br">
       <body
-        className={`h-32 overflow-y-scroll scrollbar-thin ${GeistSans.variable} ${GeistMono.variable}`}
+        className={`mx-auto grid w-full grid-cols-12 px-3 pb-20 pt-10 md:w-1/2 ${montserrat.className}`}
       >
-        <main>
-          <Navbar />
+        <Navbar />
+        <main className="col-span-12 pt-5 text-justify font-sans md:col-span-9 md:px-2">
           {children}
         </main>
       </body>

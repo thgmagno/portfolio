@@ -7,8 +7,8 @@ export function CreatePostForm() {
   const [formState, action] = useFormState(actions.newPost, { errors: {} })
 
   return (
-    <form action={action} className="flex flex-col space-y-3">
-      <section className="flex flex-col space-y-3 md:flex-row md:gap-4 md:space-y-0">
+    <form action={action}>
+      <section>
         {/* Usuário */}
         <div>
           <label htmlFor="username">Usuário</label>
@@ -34,9 +34,7 @@ export function CreatePostForm() {
         <textarea id="content" name="content" />
       </div>
 
-      {formState?.errors._form && (
-        <p className="error">{formState.errors._form}</p>
-      )}
+      {formState?.errors._form && <p>{formState.errors._form}</p>}
 
       {/* Submit */}
       <button type="submit">Publicar</button>

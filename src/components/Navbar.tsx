@@ -18,10 +18,10 @@ export function Navbar() {
       (href !== '/' && pathname.includes(href))
 
     return (
-      <li className="flex min-w-28">
+      <li>
         <Link
           href={href}
-          className={`w-full rounded px-4 py-1 text-sm md:py-2 ${isActive ? 'bg-stone-800' : ''}`}
+          className={`flex justify-center rounded p-2 text-sm md:justify-start md:text-base ${isActive ? 'bg-stone-800 text-neutral-200' : ''}`}
           target={targetBlank ? '_blank' : '_self'}
         >
           {title}
@@ -31,20 +31,16 @@ export function Navbar() {
   }
 
   return (
-    <nav className="flex min-w-28 flex-col pl-1 font-mono text-sm md:min-w-40">
-      <div className="flex justify-center p-5">
-        <span className="font-serif text-4xl md:text-6xl">TM</span>
+    <nav className="col-span-12 md:col-span-3">
+      <div className="my-5 hidden items-center justify-center md:flex">
+        <span className="cursor-default font-serif text-5xl">TM</span>
       </div>
-      <ul className="no-scrollbar flex w-full overflow-scroll md:flex-col">
+      <ul className="grid grid-cols-5 items-center md:grid-cols-1 md:px-2">
         <Item title="Início" href="/" />
-        <Item title="Sobre mim" href="/sobre" />
+        <Item title="Formação" href="/formacao" />
+        <Item title="Habilidades" href="/habilidades" />
         <Item title="Projetos" href="/projetos" />
         <Item title="Blog" href="/blog" />
-        <Item
-          title="Currículo"
-          href="https://me-green-tau.vercel.app/"
-          targetBlank
-        />
       </ul>
     </nav>
   )

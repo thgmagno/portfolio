@@ -1,11 +1,29 @@
+import data from '@/data.json'
+import { ReactNode } from 'react'
+import { Project } from '@/components/Project'
+
 export default function page() {
+  const { projects } = data
+
+  const Wrapper = ({ children }: { children: ReactNode }) => (
+    <section className="mb-10 pr-5">{children}</section>
+  )
+
+  const Title = ({ title }: { title: string }) => (
+    <b className="font-serif text-xl md:text-2xl">{title}</b>
+  )
+
   return (
-    <div className="page">
-      <section className="flex flex-col space-y-3">
-        <h1 className="font-serif text-xl font-bold md:text-3xl">
-          Conheça alguns dos meus projetos
-        </h1>
-      </section>
-    </div>
+    <>
+      <Wrapper>
+        <Title title="Projetos" />
+      </Wrapper>
+      {projects.sort().map((project) => (
+        <>
+          <Project key={project.name} project={project} />
+          <hr className="my-10 border-stone-600" />
+        </>
+      ))}
+    </>
   )
 }

@@ -4,53 +4,6 @@
 
 @layer base {
   body {
-    @apply bg-body text-stone-200
+    @apply bg-[#120f10] text-neutral-200
   }
-
-  main {
-    @apply max-w-sm md:max-w-2xl mx-auto mt-16 font-sans flex flex-col md:flex-row
-  }
-}
-
-@layer components {
-  .page {
-    @apply p-4 md:p-8 space-y-4 md:space-y-6 mb-32
-  }
-
-  .page p {
-    @apply text-justify text-sm md:text-base
-  }
-
-  .page form input {
-    @apply p-2 outline-none bg-stone-600 rounded-md
-  }
-
-  .page form textarea {
-    @apply p-2 outline-none bg-stone-600 rounded-md
-  }
-
-  .page form div {
-    @apply flex flex-col space-y-1
-  }
-
-  .page form div label {
-    @apply text-sm
-  }
-
-  .page form button[type="submit"] {
-    @apply p-2 border border-stone-600 rounded-md text-stone-400 hover:bg-stone-800 hover:text-stone-200
-  }
-
-  .error {
-    @apply text-red-600 flex justify-center
-  }
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none; 
-  scrollbar-width: none;
 }

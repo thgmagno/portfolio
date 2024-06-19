@@ -6,7 +6,7 @@ interface Props {
 
 export function Post({ post }: Props) {
   return (
-    <div className="rounded-md border p-2">
+    <div>
       <h1>{post.content}</h1>
     </div>
   )

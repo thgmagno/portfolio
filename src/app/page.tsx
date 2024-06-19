@@ -1,24 +1,15 @@
-import { ThgMagno } from '@/components/ThgMagno'
+import data from '@/data.json'
+import { Profile } from '@/components/Profile'
 
 export default function Home() {
+  const { profile } = data
+
   return (
-    <div className="page">
-      <section className="flex flex-col space-y-3">
-        <h1 className="font-serif text-xl font-bold md:text-3xl">
-          Thiago Magno
-        </h1>
-        <p>
-          Sou um desenvolvedor web apaixonado por criar soluções digitais
-          inovadoras e eficientes.
-        </p>
-      </section>
-      <ThgMagno />
-      <section className="flex flex-col space-y-3">
-        <p>
-          Meu foco é proporcionar uma experiência de usuário excepcional,
-          utilizando as melhores práticas de design e desenvolvimento.
-        </p>
-      </section>
-    </div>
+    <>
+      <h1 className="mb-5 font-serif text-3xl md:text-5xl">{profile.name}</h1>
+      <p>{profile.insights[0]}</p>
+      <Profile />
+      <p>{profile.insights[1]}</p>
+    </>
   )
 }

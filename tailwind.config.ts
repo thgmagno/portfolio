@@ -14,11 +14,10 @@ const config: Config = {
         muted: '#78716c',
       },
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
-        mono: ['var(--font-geist-mono)'],
+        sans: ['var(--font-open-sans)'],
+        oxanium: ['var(--font-oxanium)'],
       },
     },
   },
-  plugins: [require('tailwind-scrollbar')],
 }
 export default config

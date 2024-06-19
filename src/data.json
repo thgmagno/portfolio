@@ -1,0 +1,327 @@
+{
+  "profile": {
+    "name": "Thiago Magno",
+    "insights": [
+      "Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras e eficientes",
+      "Meu foco é proporcionar uma experiência de usuário excelente, utilizando as melhores práticas de design e desenvolvimento."
+    ],
+    "avatar": "/images/thiago.jpg"
+  },
+  "social": {
+    "email": {
+      "href": "mailto:thgmgn@gmail.com",
+      "address": "thgmgn@gmail.com"
+    },
+    "github": {
+      "href": "https://github.com/thgmagno",
+      "username": "thgmagno"
+    },
+    "linkedin": {
+      "href": "https://www.linkedin.com/in/thgmagno/",
+      "username": "thgmagno"
+    }
+  },
+  "hardSkills": [
+    {
+      "label": "Node.js",
+      "level": 4
+    },
+    {
+      "label": "React",
+      "level": 5
+    },
+    {
+      "label": "Next.js",
+      "level": 5
+    },
+    {
+      "label": "Typescript",
+      "level": 4
+    },
+    {
+      "label": "PostgreSQL",
+      "level": 4
+    },
+    {
+      "label": "Prisma ORM",
+      "level": 4
+    },
+    {
+      "label": "Tailwind CSS",
+      "level": 4
+    },
+    {
+      "label": "HTML/CSS/JS",
+      "level": 5
+    },
+    {
+      "label": "API Rest",
+      "level": 5
+    }
+  ],
+  "softSkills": [
+    {
+      "label": "Comunicação",
+      "level": 4
+    },
+    {
+      "label": "Trabalho em equipe",
+      "level": 5
+    },
+    {
+      "label": "Resolução de problemas",
+      "level": 5
+    },
+    {
+      "label": "Gestão de tempo",
+      "level": 4
+    },
+    {
+      "label": "Adaptabilidade",
+      "level": 4
+    },
+    {
+      "label": "Pensamento crítico",
+      "level": 4
+    },
+    {
+      "label": "Criatividade",
+      "level": 3
+    }
+  ],
+  "education": [
+    {
+      "degree": "Técnico em Informática",
+      "at": "Senai",
+      "hours": 1420
+    },
+    {
+      "degree": "Programador Web",
+      "at": "IFRS",
+      "hours": 200
+    },
+    {
+      "degree": "Full Stack Javascript",
+      "at": "OneBitCode",
+      "hours": 120
+    },
+    {
+      "degree": "Lógica de Programação",
+      "at": "IFRS",
+      "hours": 40
+    },
+    {
+      "degree": "Projeto de Sistemas Web",
+      "at": "IFRS",
+      "hours": 30
+    },
+    {
+      "degree": "Next.JS e React",
+      "at": "Cod3r Cursos Online",
+      "hours": 30
+    },
+    {
+      "degree": "Nest.JS: Fundamentos",
+      "at": "Hcode Treinamentos",
+      "hours": 20
+    }
+  ],
+  "language": [
+    {
+      "label": "Português",
+      "level": 5
+    },
+    {
+      "label": "Inglês",
+      "level": 3
+    }
+  ],
+  "projects": [
+    {
+      "name": "Aluno Connect",
+      "description": "Gerenciador de frequências escolares.",
+      "features": [
+        {
+          "label": "Autenticação JWT:",
+          "description": "Sistema de autenticação seguro utilizando JSON Web Tokens para autenticar usuários com segurança."
+        },
+        {
+          "label": "Criação de Contas:",
+          "description": "Capacidade de criar contas para diferentes tipos de usuários. [sub-description]: Alunos podem verificar sua frequência e detalhes de turmas/Professores têm permissão para registrar frequências, e gerenciar suas turmas./Administradores possuem acesso completo ao sistema, incluindo gerenciamento de usuários e configurações./Responsáveis podem visualizar as frequências dos alunos sob sua responsabilidade./Segurança e Privacidade: Implementação de medidas de segurança para proteger dados sensíveis dos alunos e informações do sistema."
+        },
+        {
+          "label": "Banco de Dados PostgreSQL:",
+          "description": "Utilização do PostgreSQL como banco de dados principal, hospedado na plataforma Vercel."
+        },
+        {
+          "label": "Prisma ORM:",
+          "description": "Integração do Prisma como ORM para otimizar a interação com o banco de dados."
+        },
+        {
+          "label": "Responsividade:",
+          "description": "Design responsivo que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
+        },
+        {
+          "label": "Facilidade de Uso:",
+          "description": "Interface intuitiva e amigável, projetada para facilitar a navegação e utilização por todos os tipos de usuários."
+        }
+      ],
+      "tecnologies": [
+        {
+          "label": "Next.JS",
+          "href": "https://nextjs.org/"
+        },
+        {
+          "label": "Prisma",
+          "href": "https://www.prisma.io/"
+        },
+        {
+          "label": "Bcrypt",
+          "href": "https://www.npmjs.com/package/bcrypt"
+        },
+        {
+          "label": "Resend",
+          "href": "https://resend.com/"
+        },
+        {
+          "label": "Typescript",
+          "href": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "Zod",
+          "href": "https://zod.dev/"
+        },
+        {
+          "label": "Zustand",
+          "href": "https://zustand-demo.pmnd.rs/"
+        },
+        {
+          "label": "Tailwind",
+          "href": "https://tailwindcss.com/"
+        }
+      ],
+      "link": "https://aluno-connect.vercel.app/",
+      "imageUrl": "/assets/student.jpg"
+    },
+    {
+      "name": "FinancePro",
+      "description": "Aplicativo gerenciador de finanças pessoais criado com Next.js, com foco em segurança, usabilidade e performance.",
+      "features": [
+        {
+          "label": "Autenticação JWT:",
+          "description": "Sistema de autenticação seguro utilizando JSON Web Tokens para autenticar usuários com segurança."
+        },
+        {
+          "label": "Criação de Conta:",
+          "description": "Capacidade de criar novas contas de usuário de forma segura e eficiente."
+        },
+        {
+          "label": "Gerenciamento de Finanças:",
+          "description": "Funcionalidade principal para registrar e categorizar despesas e receitas."
+        },
+        {
+          "label": "Banco de Dados PostgreSQL:",
+          "description": "Utilização do PostgreSQL como banco de dados principal, hospedado na plataforma Vercel."
+        },
+        {
+          "label": "Responsividade:",
+          "description": "Design responsivo que se adapta a diferentes tamanhos de tela, proporcionando uma experiência consistente em dispositivos móveis e desktops."
+        },
+        {
+          "label": "Gráficos de Comparação:",
+          "description": "Utilização de gráficos para visualizar e comparar despesas versus receitas ao longo do tempo."
+        },
+        {
+          "label": "Utilização de Server Actions",
+          "description": "Utilização de Server Actions do Next.js para lidar com lógica do lado do servidor de forma eficiente e escalável."
+        }
+      ],
+      "tecnologies": [
+        {
+          "label": "Next.JS",
+          "href": "https://nextjs.org/"
+        },
+        {
+          "label": "Prisma",
+          "href": "https://www.prisma.io/"
+        },
+        {
+          "label": "Bcrypt",
+          "href": "https://www.npmjs.com/package/bcrypt"
+        },
+        {
+          "label": "Vercel",
+          "href": "https://vercel.com/"
+        },
+        {
+          "label": "Typescript",
+          "href": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "Zod",
+          "href": "https://zod.dev/"
+        },
+        {
+          "label": "PostgreSQL",
+          "href": "https://www.postgresql.org/"
+        },
+        {
+          "label": "Tailwind",
+          "href": "https://tailwindcss.com/"
+        },
+        {
+          "label": "Sonner",
+          "href": "https://sonner.emilkowal.ski/"
+        }
+      ],
+      "link": "https://finance-pro-swart.vercel.app/",
+      "imageUrl": "/assets/money.jpg"
+    },
+    {
+      "name": "Virtual Card",
+      "description": "Virtual Card é uma aplicação web desenvolvida em React para renderização de cartões de crédito virtuais.",
+      "features": [
+        {
+          "label": "Renderização em Tempo Real",
+          "description": "A aplicação atualiza a visualização do cartão de crédito em tempo real conforme o usuário digita as informações."
+        },
+        {
+          "label": "Gerenciamento de Estado com React",
+          "description": "Utiliza hooks do React, como useState, para gerenciar o estado do formulário e do cartão."
+        },
+        {
+          "label": "Separação de Componentes",
+          "description": "A aplicação é modularizada em componentes separados para o formulário de entrada e a renderização do cartão, melhorando a manutenção e a reutilização do código."
+        },
+        {
+          "label": "Animações e Interatividade",
+          "description": "Implementação de animações suaves para transições entre a frente e o verso do cartão, melhorando a experiência do usuário."
+        },
+        {
+          "label": "Design Responsivo",
+          "description": "A interface é responsiva e otimizada para diferentes tamanhos de tela, garantindo uma experiência consistente em dispositivos móveis e desktops."
+        }
+      ],
+      "tecnologies": [
+        {
+          "label": "Next.JS",
+          "href": "https://nextjs.org/"
+        },
+        {
+          "label": "Typescript",
+          "href": "https://www.typescriptlang.org/"
+        },
+        {
+          "label": "Zustand",
+          "href": "https://zustand-demo.pmnd.rs/"
+        },
+        {
+          "label": "Tailwind",
+          "href": "https://tailwindcss.com/"
+        }
+      ],
+      "link": "https://input-cartao-de-credito.vercel.app/",
+      "imageUrl": "/assets/credit_card.jpg"
+    }
+  ]
+}
