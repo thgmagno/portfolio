@@ -17,20 +17,46 @@
   .create-post-form textarea {
     @apply flex p-2 w-full rounded-md bg-neutral-600 outline-none
   }
+}
 
+@layer components {
   .markdown {
-    @apply flex flex-col space-y-3
+    @apply mx-auto; /* prose prose-sm lg:prose-lg xl:prose-xl */
   }
 
-  .markdown h1 {
-    @apply text-2xl
+  .markdown p {
+    @apply my-4 leading-normal text-neutral-300;
   }
 
-  .markdown h2 {
-    @apply text-xl
+  .markdown ul {
+    @apply my-4 ml-6 list-disc;
   }
 
-  .markdown h3 {
-    @apply text-lg
+  .markdown ol {
+    @apply my-4 ml-6 list-decimal;
+  }
+
+  .markdown li {
+    @apply py-1;
+  }
+
+  .markdown a {
+    @apply text-blue-400 underline;
+  }
+
+  .markdown strong {
+    @apply font-semibold text-neutral-200;
+  }
+
+  .markdown em {
+    @apply italic text-neutral-300;
+  }
+
+  .markdown del {
+    @apply line-through text-neutral-400;
+  }
+
+  .markdown u {
+    @apply underline;
   }
 }

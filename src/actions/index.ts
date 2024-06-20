@@ -54,12 +54,12 @@ export async function newPost(
   redirect('/blog')
 }
 
-export async function getPosts(
-  title?: string,
-): Promise<Record<string, PostType> | null> {
-  if (title) {
-    return kv.hget('posts', title)
-  }
-
+export async function getPosts(): Promise<Record<string, PostType> | null> {
   return kv.hgetall('posts')
+}
+
+export async function getPostByTitle(
+  title: string,
+): Promise<Record<string, PostType> | null> {
+  return kv.hget('posts', title)
 }
