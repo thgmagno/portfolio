@@ -59,4 +59,12 @@
   .markdown u {
     @apply underline;
   }
+  
+  .markdown h1 {
+    @apply my-4 leading-normal text-neutral-300 text-xl;
+  }
+  
+  .markdown h2 {
+    @apply my-4 leading-normal text-neutral-300 text-lg;
+  }
 }
