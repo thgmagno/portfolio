@@ -50,7 +50,7 @@ export async function newPost(
     [title as string]: JSON.stringify(newPost),
   })
 
-  revalidatePath('/')
+  revalidatePath('/blog')
   redirect('/blog')
 }
 
