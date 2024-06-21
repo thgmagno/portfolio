@@ -2,6 +2,7 @@ import data from '@/data.json'
 import Link from 'next/link'
 import { Wrapper } from '@/components/common/Wrapper'
 import { Title } from '@/components/common/Title'
+import { EducationRender } from '@/components/EducationRender'
 
 export default function Education() {
   const { education } = data
@@ -19,16 +20,7 @@ export default function Education() {
             Currículo
           </Link>
         </div>
-        {education.map((item) => (
-          <div key={item.degree} className="my-5 flex flex-col text-start">
-            <b>
-              {item.degree} - {item.at}
-            </b>
-            <p className="font-light text-stone-300">
-              {item.hours.toLocaleString()} horas
-            </p>
-          </div>
-        ))}
+        <EducationRender education={education} />
       </Wrapper>
     </>
   )

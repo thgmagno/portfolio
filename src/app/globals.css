@@ -6,6 +6,9 @@
   body {
     @apply bg-[#120f10] text-neutral-200
   }
+  option {
+    @apply bg-stone-800
+  }
 }
 
 @layer components {
@@ -21,7 +24,7 @@
 
 @layer components {
   .markdown {
-    @apply mx-auto; /* prose prose-sm lg:prose-lg xl:prose-xl */
+    @apply mx-auto;
   }
 
   .markdown p {
@@ -58,5 +61,13 @@
 
   .markdown u {
     @apply underline;
+  }
+ 
+  .markdown h1 {
+    @apply my-4 leading-normal text-neutral-300 text-xl;
+  }
+  
+  .markdown h2 {
+    @apply my-4 leading-normal text-neutral-300 text-lg;
   }
 }

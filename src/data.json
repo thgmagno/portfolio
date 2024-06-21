@@ -93,37 +93,156 @@
     {
       "degree": "Técnico em Informática",
       "at": "Senai",
-      "hours": 1420
+      "category": "full-stack",
+      "hours": 1420,
+      "link": "https://drive.google.com/file/d/1tPhBIkWAtyIPDPrJ8f6y1aoGB3E8QS6E/view?usp=sharing"
     },
     {
       "degree": "Programador Web",
       "at": "IFRS",
-      "hours": 200
-    },
-    {
-      "degree": "Full Stack Javascript",
-      "at": "OneBitCode",
-      "hours": 120
+      "category": "full-stack",
+      "hours": 200,
+      "link": "#"
     },
     {
       "degree": "Lógica de Programação",
       "at": "IFRS",
-      "hours": 40
+      "category": "fundamentals",
+      "hours": 40,
+      "link": "#"
     },
     {
       "degree": "Projeto de Sistemas Web",
       "at": "IFRS",
-      "hours": 30
+      "category": "full-stack",
+      "hours": 30,
+      "link": "#"
+    },
+    {
+      "degree": "Full Stack Javascript",
+      "at": "OneBitCode",
+      "category": "full-stack",
+      "hours": 120,
+      "link": "#"
+    },
+    {
+      "degree": "Typescript",
+      "at": "OneBitCode",
+      "category": "front-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1zjvLV-Ka-94SSFs35ZvhWuJ3-q0hiWk7/view?usp=sharing"
+    },
+    {
+      "degree": "Git e Github",
+      "at": "OneBitCode",
+      "category": "tools",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1B7eKcIn9z2COlo7d280ZPBL5t85BQvMe/view?usp=sharing"
+    },
+    {
+      "degree": "Fundamentos do React",
+      "at": "OneBitCode",
+      "category": "front-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1OmyjGOBCEGmckyXAKk2540CgGchmPdNC/view?usp=sharing"
+    },
+    {
+      "degree": "Automação III - Automação com Selenium",
+      "at": "OneBitCode",
+      "category": "tools",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1keP8dTML_a82g0FaIl3eEIRHh9GzNAC1/view?usp=sharing"
+    },
+    {
+      "degree": "Automação II - Web Scraping e API",
+      "at": "OneBitCode",
+      "category": "tools",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1-rX7OUoCnj9edyoQesNeNKN52y-Sg74X/view?usp=sharing"
+    },
+    {
+      "degree": "Automação I - Automação de Tarefas",
+      "at": "OneBitCode",
+      "category": "tools",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1oqs-F132veyXEyhybyhj6QH3yVrt6reM/view?usp=sharing"
+    },
+    {
+      "degree": "Python V - Integração com Banco de Dados",
+      "at": "OneBitCode",
+      "category": "back-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1rxmvc7nYKFxZmpXWhTiR4-DwSGPaOr1l/view?usp=sharing"
+    },
+    {
+      "degree": "Python IV - Manipulando Arquivos",
+      "at": "OneBitCode",
+      "category": "back-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1C-YL8NujsRvNNkLS1n_XARm87Kqh6AMQ/view?usp=sharing"
+    },
+    {
+      "degree": "Python II - Módulos e PIP",
+      "at": "OneBitCode",
+      "category": "back-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1FsHb-sUebaogv4th4Uar3MsTrtf996tQ/view?usp=sharing"
+    },
+    {
+      "degree": "Python I - Introdução ao Python",
+      "at": "OneBitCode",
+      "category": "back-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1erwhbYswouvOgJN8r7yCrVLskhyy4K_8/view?usp=sharing"
+    },
+    {
+      "degree": "JavaScript { I, II, III, IV, V e VI}",
+      "at": "OneBitCode",
+      "category": "full-stack",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1xU1rroPefr11zeGoBvJcBN8Q7ra8-SfP/view?usp=sharing"
+    },
+    {
+      "degree": "CSS Moderno",
+      "at": "OneBitCode",
+      "category": "front-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1H4ZepBlJwXN-aKHjhT0F3Kcce2_B_D-z/view?usp=sharing"
+    },
+    {
+      "degree": "CSS3",
+      "at": "OneBitCode",
+      "category": "front-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1IBH53LxJDsui6nM-_iDdsmPKi8ZyQ-Xn/view?usp=sharing"
+    },
+    {
+      "degree": "HTML 5",
+      "at": "OneBitCode",
+      "category": "front-end",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1vU1Whhzpu0zKAAq66KTmiRu86P-QU6Fj/view?usp=sharing"
+    },
+    {
+      "degree": "Start - HTML, CSS e JavaScript",
+      "at": "OneBitCode",
+      "category": "full-stack",
+      "hours": 40,
+      "link": "https://drive.google.com/file/d/1J67Ksp5toLILziRkl69rvOQiOZkL8yX_/view?usp=sharing"
     },
     {
       "degree": "Next.JS e React",
       "at": "Cod3r Cursos Online",
-      "hours": 30
+      "category": "front-end",
+      "hours": 30,
+      "link": "https://ude.my/UC-eea01924-b956-417c-953e-8ee93632a95e/"
     },
     {
       "degree": "Nest.JS: Fundamentos",
       "at": "Hcode Treinamentos",
-      "hours": 20
+      "category": "back-end",
+      "hours": 20,
+      "link": "https://ude.my/UC-190b4ed1-b74d-47ed-85bb-637b5696df27/"
     }
   ],
   "language": [
