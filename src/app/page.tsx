@@ -6,10 +6,15 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="mb-5 font-serif text-3xl md:text-5xl">{profile.name}</h1>
-      <p>{profile.insights[0]}</p>
+      <section className="mb-5 flex flex-col space-y-2.5 font-serif">
+        <h1 className="text-3xl md:text-5xl">{profile.name}</h1>
+        <span className="leading-relaxed text-stone-500">
+          Desenvolvedor Web
+        </span>
+      </section>
+      <p className="leading-relaxed">{profile.insights[0]}</p>
       <Profile />
-      <p>{profile.insights[1]}</p>
+      <p className="leading-relaxed">{profile.insights[1]}</p>
     </>
   )
 }

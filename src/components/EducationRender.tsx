@@ -14,7 +14,14 @@ interface EducationProps {
 }
 
 export function EducationRender({ education }: EducationProps) {
+  const itemsPerPage = 10
+
   const [filteredList, setFilteredList] = useState(education)
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const indexOfLastItem = currentPage * itemsPerPage
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage
+  const currentItems = filteredList.slice(indexOfFirstItem, indexOfLastItem)
 
   function handleChange(e: ChangeEvent<HTMLSelectElement>) {
     if (e.target.value.length) {
@@ -24,6 +31,15 @@ export function EducationRender({ education }: EducationProps) {
     } else {
       setFilteredList(education)
     }
+    setCurrentPage(1)
+  }
+
+  function nextPage() {
+    setCurrentPage((prevPage) => prevPage + 1)
+  }
+
+  function prevPage() {
+    setCurrentPage((prevPage) => prevPage - 1)
   }
 
   return (
@@ -42,7 +58,7 @@ export function EducationRender({ education }: EducationProps) {
           <option value="tools">Ferramentas</option>
         </select>
       </section>
-      {filteredList
+      {currentItems
         .sort((a, b) => b.hours - a.hours)
         .map((item) => (
           <div
@@ -63,6 +79,26 @@ export function EducationRender({ education }: EducationProps) {
             </p>
           </div>
         ))}
+      <section className="flex justify-between text-sm text-stone-400">
+        <button
+          onClick={prevPage}
+          className="hover:text-stone-300 active:scale-95 disabled:text-transparent"
+          disabled={currentPage === 1}
+        >
+          Anterior
+        </button>
+        <span className="cursor-default">
+          Página {currentPage} de{' '}
+          {Math.ceil(filteredList.length / itemsPerPage)}
+        </span>
+        <button
+          onClick={nextPage}
+          className="hover:text-stone-300 active:scale-95 disabled:text-transparent"
+          disabled={indexOfLastItem >= filteredList.length}
+        >
+          Próxima
+        </button>
+      </section>
     </>
   )
 }

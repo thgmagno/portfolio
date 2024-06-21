@@ -24,44 +24,16 @@ export function Project({ project }: { project: ProjectType }) {
       <section className="flex items-center justify-between">
         <div className="mr-6 flex-1 text-start">
           <h1 className="font-serif text-2xl">{project.name}</h1>
-          <p className="text-sm">{project.description}</p>
+          <p className="text-sm">
+            {project.description.slice(0, 100).concat('...')}
+          </p>
         </div>
         <Link
-          href={project.link}
-          target="_blank"
-          className="min-w-20 rounded border p-2 transition-colors duration-200 hover:bg-stone-600"
+          href={`/projetos/${encodeURIComponent(project.name)}`}
+          className="flex items-center rounded border border-stone-700 px-2 py-1 text-sm hover:bg-stone-700"
         >
-          Acessar
+          Saiba mais
         </Link>
-      </section>
-
-      <section className="flex flex-col">
-        <label className="mb-5 text-lg text-stone-500">Características:</label>
-        {project.features.map((feature) => {
-          return (
-            <h2 className="mb-2.5 font-thin">
-              <b>{feature.label}</b> {feature.description}
-            </h2>
-          )
-        })}
-      </section>
-
-      <section className="flex flex-col space-y-5">
-        <label className="text-lg text-stone-500">
-          Tecnologias utilizadas:
-        </label>
-        <div className="grid grid-cols-3 gap-2 md:grid-cols-4">
-          {project.tecnologies.sort().map((tec) => (
-            <Link
-              key={tec.label}
-              href={tec.href}
-              target="_blank"
-              className="rounded border border-stone-500 bg-stone-600 px-2 py-0.5 text-sm"
-            >
-              {tec.label}
-            </Link>
-          ))}
-        </div>
       </section>
     </div>
   )

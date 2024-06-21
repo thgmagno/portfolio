@@ -8,8 +8,8 @@ export function Profile() {
   const { profile, social } = data
 
   return (
-    <section className="my-6 grid grid-cols-12">
-      <div className="col-span-4 flex items-center justify-center">
+    <section className="my-6 grid grid-cols-3 md:grid-cols-2">
+      <div className="flex items-center justify-center">
         <Image
           src={profile.avatar}
           alt={`Imagem de ${profile.name}`}
@@ -18,7 +18,7 @@ export function Profile() {
           className="rounded-full"
         />
       </div>
-      <div className="col-span-8 grid">
+      <div className="col-span-2 grid md:col-span-1">
         <a target="_blank" href={social.email.href}>
           <span className="flex items-center gap-2">
             <EmailIcon />

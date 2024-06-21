@@ -2,8 +2,8 @@
   "profile": {
     "name": "Thiago Magno",
     "insights": [
-      "Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras e eficientes",
-      "Meu foco é proporcionar uma experiência de usuário excelente, utilizando as melhores práticas de design e desenvolvimento."
+      "Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras e eficientes. Estou sempre buscando proporcionar uma experiência de usuário excelente, busco utilizar as melhores práticas de design e desenvolvimento para transformar ideias em produtos digitais impactantes e funcionais.",
+      "Proporcionar experiências de usuário excepcionais, combinando criatividade e tecnologia é o meu objetivo. Constantemente procuro me manter atualizado com as tendências e avanços no desenvolvimento web, para garantir que cada projeto seja não apenas visualmente atraente, mas também eficiente e acessível."
     ],
     "avatar": "/images/thiago.webp"
   },
@@ -258,7 +258,8 @@
   "projects": [
     {
       "name": "Aluno Connect",
-      "description": "Gerenciador de frequências escolares.",
+      "description": "Ferramenta de gestão de frequências voltado para o ambiente acadêmico estudantil - foi uma iniciativa de integração ao curso Técnico em Informática ofertado pelo Serviço Nacional de Aprendizagem Industrial - Senai, como parte dos requisitos para obtenção do título de Técnico de Informática.",
+      "purpose": "O projeto propõe uma forma inovadora de gerenciar a frequência dentro de uma instituição de ensino. Com a premissa de proporcionar uma experiência avançada e eficaz, a plataforma visa ir além do simples controle de presença, incorporando funcionalidade para otimizar a administração acadêmica, desde o acompanhamento em tempo real e até notificações automáticas via e-mail. O Aluno Connect se destaca como uma solução integral e inteligente para facilitar a jornada acadêmica, proporcionando uma gestão de frequência eficiente e contribuindo para o engajamento dos estudantes. Nesse contexto, a gestão de frequência fornecida pelo Aluno Connect torna-se uma ferramenta essencial para aprimorar o processo educacional. Ao incentivar uma participação ativa e construtiva dos estudantes, a plataforma se torna um elemento-chave para melhorar a qualidade de ensino.",
       "features": [
         {
           "label": "Autenticação JWT:",
@@ -324,7 +325,8 @@
     },
     {
       "name": "FinancePro",
-      "description": "Aplicativo gerenciador de finanças pessoais criado com Next.js, com foco em segurança, usabilidade e performance.",
+      "description": "Aplicativo gerenciador de finanças pessoais criado com Next.js, com foco em segurança, usabilidade e performance. Projetado para atender suas necessidades financeiras de maneira eficiente e intuitiva. Transforme a maneira como você gerencia seu dinheiro com ferramentas avançadas e uma interface amigável.",
+      "purpose": "O FinancePro tem como objetivo organizar a gestão das finanças pessoais, proporcionando aos usuários uma ferramenta poderosa e intuitiva que facilita o controle e o planejamento financeiro. O aplicativo permite que os usuários organizem suas finanças, registrando e categorizando despesas e receitas para obter uma visão clara e detalhada de sua situação financeira. Além disso, o software proporciona análises detalhadas por meio de relatórios e gráficos intuitivos, permitindo aos usuários compreenderem melhor seus hábitos de consumo e tomarem decisões financeiras mais informadas. Com uma interface amigável e intuitiva. Foi criado para ser um parceiro financeiro e ajudar a gerenciar o dinheiro de forma mais inteligente e eficiente, promovendo a saúde financeira e a realização de objetivos pessoais.",
       "features": [
         {
           "label": "Autenticação JWT:",
@@ -398,7 +400,8 @@
     },
     {
       "name": "Virtual Card",
-      "description": "Virtual Card é uma aplicação web desenvolvida em React para renderização de cartões de crédito virtuais.",
+      "description": "Virtual Card é uma aplicação web interativa, desenvolvida utilizando React, que simula a renderização de cartões de crédito virtuais em tempo real.",
+      "purpose": "Este projeto foi desenvolvido como parte de um mini-projeto educativo oferecido pela plataforma Codante, com o objetivo de praticar e aprimorar habilidades em HTML, CSS e JavaScript. A aplicação permite aos usuários inserir informações de cartão de crédito em um formulário, que são atualizadas dinamicamente no cartão virtual exibido na tela. O projeto foca na criação de uma interface mobile-first que inclui a frente e o verso do cartão de crédito, com a visualização do CVV sendo exibida apenas quando o campo correspondente está selecionado, proporcionando uma experiência interativa e realista de uso de cartões de crédito virtuais.",
       "features": [
         {
           "label": "Renderização em Tempo Real:",

@@ -7,6 +7,7 @@ export type PostType = {
 export type ProjectType = {
   name: string
   description: string
+  purpose: string
   features: {
     label: string
     description: string
