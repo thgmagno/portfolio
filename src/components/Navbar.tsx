@@ -32,13 +32,15 @@ export function Navbar() {
 
   return (
     <nav className="col-span-12 md:col-span-3">
-      <div className="my-5 hidden items-center justify-center md:flex">
-        <span className="cursor-default font-serif text-5xl">TM</span>
-      </div>
+      <Link
+        href="/"
+        className="my-5 hidden items-center justify-center md:flex"
+      >
+        <span className="font-serif text-5xl">TM</span>
+      </Link>
       <ul className="flex md:flex-col">
         <Item title="Início" href="/" />
         <Item title="Formação" href="/formacao" />
-        <Item title="Habilidades" href="/habilidades" />
         <Item title="Projetos" href="/projetos" />
         <Item title="Blog" href="/blog" />
       </ul>
