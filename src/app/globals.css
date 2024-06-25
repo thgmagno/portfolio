@@ -70,3 +70,17 @@
     @apply my-4 leading-normal text-neutral-300 text-lg;
   }
 }
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-20deg); }
+  30% { transform: rotate(20deg); }
+  40% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 3s infinite;
+  transform-origin: 70% 70%;
+}

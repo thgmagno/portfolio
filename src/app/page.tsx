@@ -14,7 +14,7 @@ export default function Home() {
           alt={`Imagem de ${profile.name}`}
           height={100}
           width={100}
-          className="mr-5 rounded-full"
+          className="mr-5 rounded-full ring-2 ring-neutral-300"
         />
         <article className="flex flex-col space-y-2.5 font-serif">
           <h1 className="text-3xl md:text-5xl">{profile.name}</h1>
@@ -24,7 +24,9 @@ export default function Home() {
         </article>
       </header>
       <main className="flex flex-col space-y-3">
-        <p className="font-bold leading-relaxed">Hello World. 👋</p>
+        <p className="font-bold leading-relaxed">
+          Hello World. <span className="wave">👋</span>
+        </p>
         {profile.insights.map((insight, index) => (
           <p key={index} className="leading-relaxed">
             {insight}

@@ -13,7 +13,7 @@ export default function page() {
         {projects.sort().map((project) => (
           <React.Fragment key={project.name}>
             <Project project={project} />
-            <hr className="my-10 border-stone-600" />
+            <hr className="my-10 border-stone-600 last:border-none" />
           </React.Fragment>
         ))}
       </Wrapper>
