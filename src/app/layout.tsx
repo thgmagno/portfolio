@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
 import './globals.css'
-import { Navbar } from '@/components/Navbar'
+import { Navbar } from '@/components/common/Navbar'
 
 export const metadata: Metadata = {
   title: 'Thiago Magno',

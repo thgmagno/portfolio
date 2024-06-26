@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { Wrapper } from '@/components/common/Wrapper'
 import { Title } from '@/components/common/Title'
-import { EducationRender } from '@/components/EducationRender'
 import { getCosmicData } from '@/actions'
+import { Education } from '@/components/education'
 
-export default async function Education() {
+export default async function EducationPage() {
   const { metadata } = await getCosmicData().then((data) => data.object)
 
   return (
@@ -20,7 +20,7 @@ export default async function Education() {
             Currículo
           </Link>
         </div>
-        <EducationRender education={metadata.education} />
+        <Education education={metadata.education} />
       </Wrapper>
     </>
   )

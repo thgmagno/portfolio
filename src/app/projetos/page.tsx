@@ -1,8 +1,8 @@
-import { Project } from '@/components/Project'
 import { Wrapper } from '@/components/common/Wrapper'
 import { Title } from '@/components/common/Title'
 import React from 'react'
 import { getCosmicData } from '@/actions'
+import { Project } from '@/components/project'
 
 export default async function page() {
   const { metadata } = await getCosmicData().then((data) => data.object)

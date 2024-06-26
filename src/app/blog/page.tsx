@@ -1,9 +1,9 @@
 import { getCosmicData } from '@/actions'
-import { ListPosts } from '@/components/ListPosts'
+import { Blog } from '@/components/blog'
 import { Title } from '@/components/common/Title'
 import { Wrapper } from '@/components/common/Wrapper'
 
-export default async function Blog() {
+export default async function BlogPage() {
   const { metadata } = await getCosmicData().then((data) => data.object)
 
   if (!metadata.blog.length) {
@@ -20,15 +20,7 @@ export default async function Blog() {
   return (
     <Wrapper>
       <Title title="Blog pessoal" />
-      {metadata.blog
-        .sort(
-          (a, b) =>
-            new Date(b.metadata.published_at).getTime() -
-            new Date(a.metadata.published_at).getTime(),
-        )
-        .map((post) => (
-          <ListPosts key={post.slug} post={post} />
-        ))}
+      <Blog data={metadata.blog} />
     </Wrapper>
   )
 }

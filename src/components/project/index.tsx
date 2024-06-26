@@ -1,25 +1,18 @@
 import { Project as ProjectType } from '@/lib/cosmic-types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Suspense } from 'react'
 
 export function Project({ project }: { project: ProjectType }) {
-  const Skeleton = () => (
-    <div className="relative flex h-60 w-full animate-pulse overflow-hidden rounded-lg bg-zinc-500" />
-  )
-
   return (
     <div className="mb-10 mt-5 flex flex-col space-y-5 rounded-lg">
-      <Suspense fallback={Skeleton()}>
-        <div className="relative flex h-60 w-full overflow-hidden rounded-lg border-2 border-stone-600">
-          <Image
-            src={project.project_image.url}
-            layout="fill"
-            objectFit="cover"
-            alt={`Imagem do projeto ${project.title}`}
-          />
-        </div>
-      </Suspense>
+      <div className="relative flex h-60 w-full overflow-hidden rounded-lg border-2 border-stone-600">
+        <Image
+          src={project.project_image.url}
+          layout="fill"
+          objectFit="cover"
+          alt={`Imagem do projeto ${project.title}`}
+        />
+      </div>
 
       <section className="flex items-center justify-between">
         <div className="mr-6 flex-1 text-start">

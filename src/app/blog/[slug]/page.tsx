@@ -1,5 +1,5 @@
 import * as actions from '@/actions'
-import { Post } from '@/components/Post'
+import { Post } from '@/components/blog/Post'
 import { Wrapper } from '@/components/common/Wrapper'
 import { redirect } from 'next/navigation'
 
