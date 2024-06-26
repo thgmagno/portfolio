@@ -8,19 +8,15 @@ export default async function ViewPost({
 }: {
   params: { slug: string }
 }) {
-  const posts = await actions.getPostByTitle(decodeURIComponent(params.slug))
+  const { metadata } = await actions.getCosmicData().then((data) => data.object)
 
-  if (!posts) redirect('/blog')
+  const post = metadata.blog.find((post) => post.slug === params.slug)
+
+  if (!post) redirect('/blog')
 
   return (
     <Wrapper>
-      <Post
-        post={{
-          title: String(Object.values(posts)[0]),
-          content: String(Object.values(posts)[1]),
-          createdAt: String(Object.values(posts)[2]),
-        }}
-      />
+      <Post post={post} />
     </Wrapper>
   )
 }

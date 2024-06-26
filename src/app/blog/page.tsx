@@ -1,12 +1,12 @@
-import * as actions from '@/actions'
+import { getCosmicData } from '@/actions'
 import { ListPosts } from '@/components/ListPosts'
 import { Title } from '@/components/common/Title'
 import { Wrapper } from '@/components/common/Wrapper'
 
 export default async function Blog() {
-  const posts = await actions.getPosts()
+  const { metadata } = await getCosmicData().then((data) => data.object)
 
-  if (!posts) {
+  if (!metadata.blog.length) {
     return (
       <Wrapper>
         <Title title="Blog pessoal" />
@@ -20,10 +20,14 @@ export default async function Blog() {
   return (
     <Wrapper>
       <Title title="Blog pessoal" />
-      {Object.entries(posts)
-        .reverse()
-        .map(([title, post]) => (
-          <ListPosts key={title} title={title} post={post} />
+      {metadata.blog
+        .sort(
+          (a, b) =>
+            new Date(b.metadata.published_at).getTime() -
+            new Date(a.metadata.published_at).getTime(),
+        )
+        .map((post) => (
+          <ListPosts key={post.slug} post={post} />
         ))}
     </Wrapper>
   )

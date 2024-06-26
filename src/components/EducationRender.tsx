@@ -1,16 +1,11 @@
 'use client'
 
+import { Education } from '@/lib/cosmic-types'
 import Link from 'next/link'
 import { ChangeEvent, useState } from 'react'
 
 interface EducationProps {
-  education: {
-    degree: string
-    at: string
-    category: string
-    hours: number
-    link: string
-  }[]
+  education: Education[]
 }
 
 export function EducationRender({ education }: EducationProps) {
@@ -22,6 +17,10 @@ export function EducationRender({ education }: EducationProps) {
   const indexOfLastItem = currentPage * itemsPerPage
   const indexOfFirstItem = indexOfLastItem - itemsPerPage
   const currentItems = filteredList.slice(indexOfFirstItem, indexOfLastItem)
+
+  const categoryOptions = Array.from(
+    new Set(education.map((item) => item.category)),
+  )
 
   function handleChange(e: ChangeEvent<HTMLSelectElement>) {
     if (e.target.value.length) {
@@ -51,31 +50,31 @@ export function EducationRender({ education }: EducationProps) {
           className="bg-transparent px-2 outline-none"
         >
           <option value="">Todos</option>
-          <option value="front-end">Front-end</option>
-          <option value="back-end">Back-end</option>
-          <option value="full-stack">Full-stack</option>
-          <option value="fundamentals">Fundamentos</option>
-          <option value="tools">Ferramentas</option>
+          {categoryOptions.sort().map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
         </select>
       </section>
       {currentItems
-        .sort((a, b) => b.hours - a.hours)
+        .sort((a, b) => Number(b.duration) - Number(a.duration))
         .map((item) => (
           <div
             key={item.degree}
             className="my-5 flex flex-col items-start text-start"
           >
             <Link
-              href={item.link}
-              target={item.link === '#' ? '_self' : '_blank'}
-              className={`${item.link === '#' ? 'cursor-default' : 'hover:underline'}`}
+              href={item.document_url}
+              target={item.document_url === '#' ? '_self' : '_blank'}
+              className={`${item.document_url === '#' ? 'cursor-default' : 'hover:underline'}`}
             >
               <b>
-                {item.degree} - {item.at}
+                {item.degree} - {item.instituition}
               </b>
             </Link>
             <p className="cursor-default font-light text-stone-300">
-              {item.hours} horas
+              {item.duration} horas
             </p>
           </div>
         ))}

@@ -1,36 +1,46 @@
 import { redirect } from 'next/navigation'
-import data from '@/data.json'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Title } from '@/components/common/Title'
+import { getCosmicData } from '@/actions'
 
 export default async function ViewProject({
   params,
 }: {
   params: { slug: string }
 }) {
-  const project = data.projects.filter(
-    (project) => project.name === decodeURIComponent(params.slug),
-  )[0]
+  const { metadata } = await getCosmicData().then((data) => data.object)
+
+  const project = metadata.projects.find(
+    (project) => project.slug === params.slug,
+  )
 
   if (!project) redirect('/projetos')
 
+  const features = metadata.features
+    .filter((item) => item.slug === project.slug)
+    .flatMap((feature) => feature.metadata.features)
+
+  const technologies = metadata.technologies
+    .filter((item) => item.slug === project.slug)
+    .flatMap((tech) => tech.metadata.technologies)
+
   return (
     <div className="mb-10 flex flex-col space-y-3 rounded-lg">
-      <Title title={`${project.name}`} />
+      <Title title={`${project.title}`} />
       <p className="text-sm leading-relaxed">{project.description}</p>
 
       <Link
-        href={project.link}
+        href={project.project_url}
         target="_blank"
-        title={`Visitar o projeto ${project.name}`}
+        title={`Visitar o projeto ${project.title}`}
         className="relative flex h-60 w-full overflow-hidden rounded-lg border-2 border-stone-600 hover:border-stone-300"
       >
         <Image
-          src={project.imageUrl}
+          src={project.project_image.url}
           layout="fill"
           objectFit="cover"
-          alt={`Imagem do projeto ${project.name}`}
+          alt={`Imagem do projeto ${project.title}`}
         />
       </Link>
 
@@ -43,17 +53,15 @@ export default async function ViewProject({
       </div>
 
       <label className="mb-5 text-lg text-stone-500">Objetivo:</label>
-      <p className="text-sm leading-relaxed">{project.purpose}</p>
+      <p className="text-sm leading-relaxed">{project.objective}</p>
 
       <section className="flex flex-col">
         <label className="mb-5 text-lg text-stone-500">Características:</label>
-        {project.features.map((feature) => {
-          return (
-            <p className="mb-2 font-thin leading-relaxed">
-              <b>{feature.label}</b> {feature.description}
-            </p>
-          )
-        })}
+        {features.map((feature) => (
+          <p key={feature.title} className="mb-3 font-thin leading-relaxed">
+            <b>{feature.title}</b>: {feature.description}
+          </p>
+        ))}
       </section>
 
       <section className="flex flex-col space-y-5">
@@ -61,14 +69,14 @@ export default async function ViewProject({
           Tecnologias utilizadas:
         </label>
         <div className="grid grid-cols-3 gap-2 md:grid-cols-4">
-          {project.tecnologies.sort().map((tec) => (
+          {technologies.sort().map((tech) => (
             <Link
-              key={tec.label}
-              href={tec.href}
+              key={tech.title}
+              href={tech.url}
               target="_blank"
               className="rounded border border-stone-700 px-2 py-0.5 text-sm hover:bg-stone-700"
             >
-              {tec.label}
+              {tech.title}
             </Link>
           ))}
         </div>

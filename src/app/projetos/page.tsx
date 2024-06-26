@@ -1,17 +1,18 @@
-import data from '@/data.json'
 import { Project } from '@/components/Project'
 import { Wrapper } from '@/components/common/Wrapper'
 import { Title } from '@/components/common/Title'
 import React from 'react'
+import { getCosmicData } from '@/actions'
 
-export default function page() {
-  const { projects } = data
+export default async function page() {
+  const { metadata } = await getCosmicData().then((data) => data.object)
+
   return (
     <>
       <Wrapper>
         <Title title="Projetos" />
-        {projects.sort().map((project) => (
-          <React.Fragment key={project.name}>
+        {metadata.projects.sort().map((project) => (
+          <React.Fragment key={project.title}>
             <Project project={project} />
             <hr className="my-10 border-stone-600 last:border-none" />
           </React.Fragment>
