@@ -7,9 +7,6 @@ export async function getCosmicData(): Promise<CosmicObject> {
 
   return fetch(apiURL, {
     method: 'GET',
-    next: {
-      revalidate: 86400,
-      tags: ['cosmic-object'],
-    },
+    cache: 'no-cache',
   }).then((res) => res.json())
 }
